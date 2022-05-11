@@ -1,0 +1,407 @@
+ul, li, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+  }
+
+.carousel-inner{
+    height: 100vh;
+}
+  
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    /* bottom: 3rem; */
+    z-index: 10;
+    top: 70%;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+.carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+
+.carousel-indicators{
+    margin-bottom: 10vh;
+}
+
+@media only screen 
+and (orientation: portrait) {
+    .carousel-caption {
+        top: auto;
+        bottom: 20%
+    }
+        
+
+    .carousel-inner{
+        height: auto;
+    }
+
+    .carousel-item > img{
+        width: auto;
+        height: 100%; 
+    }
+
+    .carousel-indicators{
+        margin-bottom: 5vh;
+    }
+}
+
+.hero{
+    box-sizing: border-box;
+    margin-top: 56px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: darkgrey;
+}
+
+.underline{
+    width: 100px;
+    height: 1px;
+    background-color: brown;
+}
+
+section{
+    padding: 80px 0 120px 0;
+}
+
+.about{
+}
+
+.demo{
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+.features{
+    padding-top: 80px;
+    padding-bottom: 46px;
+}
+
+.features .card,
+.services .card{
+    margin-bottom: 24px;
+}
+
+.services{
+    background-color: white;
+}
+
+.services .row{
+    margin-top: 80px;
+}
+
+footer{
+    padding: 40px 0 20px 0;
+    background-color: rgb(235, 235, 235);
+    color: rgb(65, 65, 65);
+}
+
+footer .left-block{
+    height: 180px;
+}
+
+footer small{
+    color: rgb(100, 100, 100) ;
+    font-size: 9px;
+    border-top: rgb(100, 100, 100) 1px solid;
+    padding-top: 6px;
+}
+
+.main-footer.hidden{
+    display: none;
+}
+
+/* navbar
+-------------------------------------------------- */
+.main-header .navbar.hidden{
+    display: none;
+}
+
+/* Hover underline animation */
+header .navbar-dark .navbar-toggler{
+    color: transparent;
+    border-color: transparent;
+}
+
+header .navbar{
+    padding: 16px 36px;
+}
+
+header .nav-item{
+    position: relative;
+    padding: 0 8px;
+}
+
+header .nav-item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+header .nav-item:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Animated 'X' icon for bootstrap toggle 
+--------------------------------------------- */
+/* .icon-bar{
+    width: 22px; 
+    height: 2px;
+    background-color: #B6B6B6;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler{
+  border: none;
+  background: transparent !important;
+}
+
+.navbar-toggler .top-bar{
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar{
+  opacity: 0;
+}
+
+.navbar-toggler .bottom-bar{
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar{
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar{
+  opacity: 1;
+}
+
+.navbar-toggler.collapsed .bottom-bar{
+  transform: rotate(0);
+} */
+
+@media only screen 
+and (orientation: portrait) {
+    header .navbar{
+        padding: 8px 0;
+    }
+
+    footer .row{
+        flex-direction: column-reverse;
+    }
+
+    footer .map{
+        margin-bottom: 40px;
+    }
+}
+
+/* PAGES || Bootstrap || Cards
+-------------------------------------------------- */
+.card-body{
+    color: #000;
+  }
+
+  .card-title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.25rem;
+  }
+
+  .card .badge{
+    font-size: 9px;
+    height: 24px;
+    line-height: 2;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: right;
+  }
+
+  .card-text{
+    font-size: 14px;
+  }
+
+  .card-link{
+    display: block;
+    font-size: 14px;
+    min-width: 50px;
+    float: right;
+  }
+
+  .features .card{
+    background-color: transparent;
+    border: none;
+  }
+
+  .features .card-body{
+    padding: 8px 0 0 0;
+  }
+
+  .features .card-title{
+    font-size: 0.75rem;
+    display: inherit;
+    text-align: center;
+    color: rgb(97, 73, 73);
+  }
+
+  .features .content{
+      text-align: justify;
+      padding: 0 36px;
+  }
+
+/* DARK-THEME-SWITCH
+---------------------- */
+:root {
+    --background: #000;
+    --text: #FFF;
+    --highlight: #535353;
+}
+.theme-switch-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-switch {
+    --background: #FFF;
+    --text: #000;
+    color: var(--text);
+    width: 70px;
+    height: 30px;
+    background: var(--highlight);
+    border-radius: 50px;
+    position: relative;
+}
+.theme-switch .switch {
+    background: white;
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: 0.5s all ease;
+}
+
+.dark-theme .theme-switch {
+    /* background: var(--text); */
+    background-color: rgb(204, 204, 204);
+}
+.dark-theme .theme-switch .switch {
+    transform: translateX(37px);
+}
+
+/* NAVBAR LIGHT
+---------------------- */
+.navbar{
+    background-color: #f0f0f0;
+}
+
+.navbar-brand,
+.nav-link{
+    color: rgb(66, 66, 66);
+}
+
+/* .navbar a:hover,
+.nav-link:hover{
+    color: #2b2b2b;
+} */
+
+/* NAVBAR DARK
+---------------------- */
+.dark-theme .navbar{
+    background-color: #222;
+}
+
+.dark-theme .navbar-brand,
+.dark-theme .nav-link{
+    color: white;
+}
+
+.dark-theme .nav-link:hover{
+    color: #a7a7a7;
+}
+
+/* DARK THEME
+---------------------- */
+body.dark-theme{
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.dark-theme .demo,
+.dark-theme .services{
+    background-color: rgb(29, 39, 48);
+}
+
+.dark-theme .card{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .card-title,
+.dark-theme .card-text{
+    color: white;
+}
+
+.dark-theme .card-link{
+    color: rgb(172, 172, 172);
+}
+
+.dark-theme .card-link:hover{
+    color: #FFF;
+}
+
+.dark-theme .features{
+    background-color: transparent;
+}
+
+.dark-theme footer.main-footer{
+    background-color: #222;
+    color: #FFF;
+}
+
+@media only screen 
+and (orientation: portrait) {
+    .theme-switch-block{
+        display: block;
+    }
+}

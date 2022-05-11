@@ -1,0 +1,652 @@
+/* GLOBAL SETTING
+--------------------------------------------- */
+*{
+    transition: all 0.3s ease;
+}
+
+/* DEMO PAGE SETTING
+--------------------------------------------- */
+.demo1{
+    /* margin: 72px 0 0 0; */
+    font-family: 'Noto Sans TC', sans-serif;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.demo1 .demo-header{
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    /* height: calc(100vh + 136px); */
+    height: calc(100vh + 136px*2);
+    background-color: #E5DBD0;
+    overflow: hidden;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.demo-header .logo-block{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 33px;
+    top: 40px;
+}
+
+.demo-header .logo-block .logo{
+    fill: #545857;
+}
+
+.demo-header .logo-block p{
+    margin-top: 10px;
+}
+
+.demo-header svg.logo{   
+    width: 200px;
+    height: 57px;
+    fill: rgb(255, 255, 255);
+}
+
+.demo-header .navbar{
+    height: 88px;
+    font-size: 16px;
+    color: #545857;
+    font-weight: 100;
+    padding: 0;
+}
+
+.demo-header .navbar li{
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    min-width: 100px;
+}
+
+.demo-header .navbar li:first-child{
+    padding: 0;
+    min-width: 70px;
+}
+
+.demo-header .navbar li:nth-child(3){
+    min-width: 80px;
+}
+
+.demo-header .navbar li:nth-child(5){
+    min-width: 110px;
+}
+
+.demo-header .navbar li:last-child{
+    padding: 0;
+    text-align: right;
+    min-width: 70px;
+}
+
+.navbar{
+    background-color: transparent;
+}
+
+.demo-header .navbar li:hover{
+    font-weight: bold;
+}
+
+.a-link{
+    text-decoration: none;
+    color: #545857;
+}
+
+.demo-header .follow-block{
+    position: absolute;
+    overflow: hidden;
+    width: 230px;
+    right: 0;
+    top: calc(50vh - 130px);
+    letter-spacing: 3px;
+    transform:rotate(90deg);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 160px;
+}
+
+.follow-block-icon span{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.follow-block-icon span:hover{
+    opacity: .5;
+}
+
+.header-cover{
+    background-image: url('~/static/images/photographer-gc140bdd25_1920 1.png');
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh);
+    /* height: calc(100vh - (88px + 72px)); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-cover svg.logo{
+    width: 60%;
+    height: 26%;
+}
+
+.header-cover p{
+    color: #fff;
+    text-align: right;
+    width: 80%;
+    letter-spacing: 3px;
+}
+
+/* 首頁區塊 | Title
+---------------------------------*/
+
+.title{
+    position: relative;
+    height: 100px;
+    color: #545857;
+    margin-top: 130px;
+}
+
+.title::before{
+    position: absolute;
+    font-size: 3.5rem;
+    z-index: 2;
+    left: 25%;
+    top: 62.5%;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 10px;
+    padding-left: 10px;
+
+}
+
+.title::after{
+    position: absolute;
+    color: #EDEDED;
+    font-size: 8.5rem;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 60px;
+    padding-left: 60px;
+}
+
+/* ABOUT 首頁區塊
+---------------------------------*/
+
+.about-index .title::before,
+.about-index .title::after{
+    content: 'ABOUT';
+}
+
+.news-index .title::before,
+.news-index .title::after{
+    content: 'NEWS';
+}
+
+.about-index{
+    padding-bottom: 130px;
+}
+
+.about-header{
+    margin-top: 180px;
+}
+
+.about-header-content{
+    color: #545857;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-header-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    width: 400px;
+    text-align: left;
+}
+
+.about-header-text{
+    font-size: 16px;
+    width: 400px;
+    text-align: left;
+}
+
+.about-header-img{
+    padding: 0 80px 80px;
+}
+
+/* NEWS 首頁區塊
+---------------------------------*/
+
+.news-index{
+    background-color: #CFE7D8;
+    padding-bottom: 260px;
+    overflow: hidden;
+}
+
+.news-list{
+    margin: 180px auto 0 auto;
+    width: 700px;
+}
+
+.news-list ul li{
+    display: flex;
+    color: #545857;
+    border-bottom: #b5b9b8 1px solid;
+    padding: 16px;
+}
+
+.news-list-date{
+    position: relative;
+    padding-right: 32px;
+    font-size: 11px;
+    line-height: 2.5em;
+}
+
+.news-list-title{
+    padding-left: 32px;
+}
+
+.news-list-date::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 20%;
+    width: 1px;
+    height: 75%;
+    background-color: #b5b9b8;
+}
+
+/* GARRLY & WORKS 首頁區塊
+---------------------------------*/
+.garlly-index,
+.works-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    color: #545857;
+}
+
+.garlly-index{
+    background-image: url('~/static/images/woman-407168_1920 1.png');
+    background-size: cover;
+}
+
+.works-index{
+    background-image: url('~/static/images/young-woman-3783862_1920 1.png');
+    background-size: cover;
+}
+
+.garlly-index .inner-block,
+.works-index .inner-block{
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner-block-title{
+    font-size: 48px;
+    font-weight: bolder;
+    letter-spacing: 16px;
+}
+
+.inner-block-underline{
+    height: 1px;
+    width: 17.5%;
+    margin: 0.5vw auto 0 auto;
+    background-color: #545857;
+}
+
+.inner-block-text{
+    margin: 3vw auto;
+    max-width: 80%;
+}
+
+.inner-block-btn{
+    width: 330px;
+    height: 60px;
+    border: 1px solid #545857;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.inner-block-btn:hover{
+    background-color: #545857;
+    color: #fff;
+}
+
+/* SNS 首頁區塊
+---------------------------------*/
+.sns-index{
+    overflow-x: hidden;
+    padding: 60px;
+}
+
+.sns-index .row>*{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sns-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.sns-bg{
+    padding: 0;
+    margin: 0;
+}
+
+.sns-log{
+    position: absolute;
+    z-index: 2;
+    top: 33%;
+    left: 5%;
+    width: 40%;
+}
+
+.sns-log .logo{
+    fill: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.sns-log>p{
+    position: absolute;
+    left: 10px;
+    bottom: -10%;
+    color: white;
+    letter-spacing: 6px;
+    font-size: 200%;
+}
+
+.sns-btn-block{
+    position: absolute;
+    height: 100%;
+    right: 75px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sns-btn{
+    width: 330px;
+    height: 60px;
+    border: #fff 1px solid;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sns-btn:hover{
+    background-color: rgba(255, 255, 255, .75);
+    color: #545857;
+}
+
+footer{
+    background-color: transparent;
+    color: #545857;
+    padding: 0 60px 30px 60px;
+}
+
+@media only screen 
+  and (max-device-width: 1366px) {
+    .sns-log>p{
+        font-size: 120%;
+    }
+}
+
+@media only screen 
+  and (max-device-width: 1366px) {
+    .sns-log>p{
+        font-size: 80%;
+        letter-spacing: 5px;
+    }
+}
+
+@media only screen 
+  and (max-device-width: 767px) { 
+    .demo1{
+        /* margin: 56px 0 0 0; */
+    }
+
+    .demo-header .navbar, .demo-header .follow-block{
+        display: none;
+    }
+
+    .demo1 .demo-header{
+        padding-top: 46px;
+        padding-left: 27px;
+        padding-right: 27px;
+        height: calc(100vh + 46px*2 );
+    }
+
+    .demo-header .logo-block{
+        left: 12px;
+        top: 27px;
+        width: 110px;
+    }
+
+    .demo-header .logo-block .logo{
+        width: 100%;
+        height: auto;
+    }
+
+    .demo-header .logo-block p{
+        margin: 0;
+        font-size: xx-small;
+    }
+
+    .header-cover{
+        background-position: 35%;
+    }
+
+    .header-cover svg.logo{
+        width: 90%;
+        height: 16%;
+    }
+    
+    .header-cover p{
+        color: #fff;
+        text-align: center;
+        width: 60%;
+        letter-spacing: inherit;
+        font-size: .5em;
+    }
+
+    .title{
+        height: 100px;
+        margin-top: 80px;
+    }
+
+    .title::before{
+        font-size: 2.5rem;
+        left: 0;
+        top: 30%;
+        width: 100%;
+        padding-left: 0;
+        letter-spacing: 0;
+    }
+    
+    .title::after{
+        font-size: 5rem;
+        left: 0;
+        top: 0%;
+        width: 100%;
+        padding-left: 0;
+        letter-spacing: 10px;
+    }
+
+    .about-header{
+        margin-top: 80px;
+    }
+
+    .about-header-content{
+        color: #545857;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .about-header-title{
+        margin-bottom: 36px;
+        width: auto;
+        text-align: left;
+        padding: 0 30px;
+    }
+    
+    .about-header-text{
+        font-size: 16px;
+        width: auto;
+        text-align: left;
+        padding: 0 30px;
+    }
+
+    .about-header-img{
+        padding: 0 40px 40px;
+    }
+
+    .news-index{
+        padding-bottom: 130px;
+    }
+
+    .news-list{
+        margin: 80px auto 0 auto;
+        width: auto;
+    }
+    
+    .news-list ul li{
+        display: block;
+    }
+    
+    .news-list-date{
+        position: static;
+        padding-right: 0;
+    }
+    
+    .news-list-title{
+        padding-left: 0;
+    }
+
+    .inner-block-title{
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
+    
+    .inner-block-underline{
+        width: 27.5%;
+        margin: 1.5vw auto 0 auto;
+    }
+    
+    .inner-block-text{
+        font-size: 14px;
+        margin: 8vw auto;
+        max-width: 80%;
+    }
+    
+    .inner-block-btn{
+        font-size: 12px;
+        width: 225px;
+        height: 48px;
+    }
+
+    .sns-index{
+        padding: 30px 0;
+    }
+    
+    /* .sns-index .row>*{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .sns-content{
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sns-bg{
+        padding: 0;
+        margin: 0;
+    } */
+
+    .sns-content{
+        background-color: #545857;
+    }
+
+    .sns-content img{
+        opacity: 0.5;
+    }
+    
+    .sns-log{
+        position: absolute;
+        z-index: 2;
+        top: 15%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sns-log .logo{
+        width: 50%;
+    }
+    
+    .sns-log>p{
+        position: static;
+        color: white;
+        margin-top: 3%;
+        margin-left: 3%;
+        letter-spacing: 2px;
+        font-size: 100%;
+    }
+    
+    .sns-btn-block{
+        position: absolute;
+        height: auto;
+        right: 0;
+        top: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sns-btn{
+        width: 36%;
+        height: 30px;
+        font-size: .75rem;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #545857;
+    }
+
+    .sns-btn:first-child{
+        margin-right: 20px;
+    }
+    
+}
